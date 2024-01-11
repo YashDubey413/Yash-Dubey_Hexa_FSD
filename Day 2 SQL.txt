@@ -1,0 +1,97 @@
+Day 2 SQL
+
+
+Whatever is there in projection other than aggregate functions needs to be there in group by..........
+
+Internally Where clause executes before forming groups therefore we cannot use where clause for group by we have to use having..........
+
+Group by clause is always executed after where clause or where is always executed before group by there where cannot be used for group by............
+
+EX.  select job,sum(salary) from employees where job!='President' group by job having sum(salary)>30000 order by sum(salary) desc;
+(Here first select will happen then group by will happen and then order by will happen.)
+
+=======================================================================
+
+select ename where ename like'S%';
+
+select ename from employees where ename like'T__';
+
+% - Any number of characters
+_ - Any character but only one character
+
+Can also be used for numbers and dates
+
+select * from employees where doj like '%-01-%';
+
+select * from employees where doj like '%2022%';
+
+
+BETWEEN===============================
+
+select * from employees where salary between 5000 and 20000;
+// Here 5000 and 20000 are included
+
+
+LIMIT==================================
+select * from employees order by salary desc limit 3;
+
+select * from employees order by doj desc limit 3;
+select * from employees order by doj limit 1;
+
+===============================================================
+DUAL is temporary table
+select current_date from dual;
+select 1+2 from dual;
+
+
+DATE FUNCTIONS==================================================
+
+select current_date;
+select year(current_date);
+
+select ename,extract(month from doj) joining_month from employees;
+
+select year(current_date);  yaer/month/date
+
+select now();
+
+select extract(hour from now());               //hour/week/year/year_month
+
+select extract(year_month from current_date);  // hour_minute,hour_second,etc...
+
+select extract(quarter from now());
+
+DATE_FORMAT
+
+select ename,date_format(doj,'%d-%m-%Y') from employees;  //every character has a specific value from %a,%A to %y,%Y
+
+
+select ename,date_format(doj,'%a %D %b %Y') from employees;
+
+
+https://www.mysqltutorial.org/mysql-date-functions/mysql-extract/
+
+
+
+
+
+
+STRING FUNCTIONS=================================================
+
+select concat(ename,' is ',job) from employees;
+
+select upper(concat(ename,' is ',job)) from employees;
+
+select reverse(ename) from employees;
+select reverse('yash');
+
+https://www.mysqltutorial.org/mysql-string-functions/
+
+
+select ename,comm from employees;
+select ename,coalesce(comm,0) from employees;
+
+select ename,coalesce(comm) from employees;
+
+
+select greatest(comm,salary) from employees; // the greatest function does horizontal comparison.
