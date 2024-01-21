@@ -1,0 +1,14 @@
+package abstraction;
+
+public class BankImpl implements IBank{
+	
+	public void deposit() {
+		
+		System.out.println("Deposited 10rs according to your face");
+	}
+	
+	public void withdraw() {
+		System.out.println("Withdrew 5rs by seeing your face");
+	}
+
+}

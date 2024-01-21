@@ -1,0 +1,20 @@
+package com.hexaware;
+
+public class StringDemo {
+	public static void main(String[] args) {
+		StringDemo d1=new StringDemo();
+		StringDemo d2=new StringDemo();
+		
+		//System.out.println(d1.equals(d2));
+		
+		String str1=new String("Hello");
+		String str2=new String("Hello");
+		
+		System.out.println(str1.equals(str2));
+	}
+	
+	
+	
+	
+
+}

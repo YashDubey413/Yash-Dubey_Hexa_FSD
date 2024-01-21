@@ -1,0 +1,32 @@
+package datetime;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DateTime {
+	public static void main(String[] args) {
+		
+		LocalDate date1=LocalDate.now();
+		
+		System.out.println(date1);
+		
+		LocalDate dob=LocalDate.of(2002, 4, 17);
+		System.out.println("DOb is: "+dob);
+		
+		String str="2001-12-18";
+		LocalDate strdate=LocalDate.parse(str);
+		System.out.println(strdate);
+		
+		DateTimeFormatter format=DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		LocalDate date2=LocalDate.parse("24-11-2013",format);
+		
+		System.out.println("Parsed str with custom format:"+date2);
+		
+		
+		
+		
+		
+		
+	}
+
+}

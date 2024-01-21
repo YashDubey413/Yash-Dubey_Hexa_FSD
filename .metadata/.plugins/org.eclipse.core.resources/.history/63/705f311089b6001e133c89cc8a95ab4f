@@ -1,0 +1,25 @@
+package threads;
+
+public class MyRunnable implements Runnable{
+	
+	public static void main(String[] args) {
+		
+		Runnable m=new MyRunnable();
+		
+		Thread t1=new Thread(m);
+		
+		System.out.println(m);
+		System.out.println(t1);
+		
+		t1.start();
+		
+	}
+
+	@Override
+	public void run() {
+		
+		System.out.println("run is called");
+		
+	}
+
+}

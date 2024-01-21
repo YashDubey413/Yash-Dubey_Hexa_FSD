@@ -1,0 +1,39 @@
+package dao;
+
+import java.util.List;
+
+import entities.Department;
+
+public class DepartmentDaoImpl implements IDepartmentDao{
+
+	@Override
+	public int insertDept(Department dept) {
+		
+		return 0;
+	}
+
+	@Override
+	public int updateDept(Department dept) {
+		
+		return 0;
+	}
+
+	@Override
+	public int deleteOne(int dno) {
+		
+		return 0;
+	}
+
+	@Override
+	public Department selectOne(int dno) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Department> selectAll() {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,26 @@
+package collections;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+
+public class LinkedList {
+	public static void main(String[] args) {
+		ArrayList <Integer>arr=new ArrayList<>();
+		arr.add(5);
+		arr.add(4);
+		arr.add(6);
+		
+		Collections.sort(arr);
+		System.out.println(arr);
+		
+		Iterator <Integer>i=arr.iterator();
+		while(i.hasNext()) {
+			System.out.println(i.next());
+		}
+		
+		
+		
+	}
+
+}

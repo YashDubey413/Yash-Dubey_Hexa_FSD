@@ -1,0 +1,10 @@
+package exception;
+
+public class AgeExcep extends RuntimeException{
+
+	public AgeExcep(){
+		System.out.println("You are too young");
+	}
+	
+
+}

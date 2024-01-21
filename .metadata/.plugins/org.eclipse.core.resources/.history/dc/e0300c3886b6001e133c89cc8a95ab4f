@@ -1,0 +1,11 @@
+package threads;
+
+public class Mythread extends Thread{
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package threads;
+
+public class Mythread extends Thread{
+	
+	public static void main(String[] args) {
+		
+		Mythread t1=new Mythread();
+		System.out.println(t1);
+		
+		Mythread t2=new Mythread();
+		System.out.println(t2);
+		
+	}
+
+}

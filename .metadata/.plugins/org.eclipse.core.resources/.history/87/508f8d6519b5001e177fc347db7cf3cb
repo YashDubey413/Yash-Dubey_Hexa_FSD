@@ -1,0 +1,9 @@
+package employee;
+
+public class TestPAtient {
+	public static void main(String[] args) {
+		Patient p=new Patient(101, "Yash","2002-17-04",1234567890,null);
+		
+	}
+
+}

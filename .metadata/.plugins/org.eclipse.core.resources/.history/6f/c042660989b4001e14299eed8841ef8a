@@ -1,0 +1,10 @@
+package exception;
+
+class AgeExcep1 extends Exception{
+
+	public AgeExcep1(String s){
+		super(s);
+	}
+	
+
+}

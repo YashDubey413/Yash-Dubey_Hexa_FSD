@@ -1,0 +1,12 @@
+package presentation;
+
+import dao.DepartmentDaoImpl;
+
+public class Client {
+	public static void main(String[] args) {
+		
+		DepartmentDaoImpl d=new DepartmentDaoImpl();
+		
+	}
+
+}

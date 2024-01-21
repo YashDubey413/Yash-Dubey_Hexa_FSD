@@ -1,0 +1,39 @@
+package dao;
+
+import java.util.List;
+
+import entities.Department;
+
+public class DepartmentDaoImpl implements IDepartmentDao{
+
+	@Override
+	public int insertDept(Department dept) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateDept(Department dept) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteOne(int dno) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Department selectOne(int dno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Department> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

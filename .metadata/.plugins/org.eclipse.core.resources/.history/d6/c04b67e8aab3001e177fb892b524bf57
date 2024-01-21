@@ -1,0 +1,33 @@
+package abstraction;
+import java.util.Scanner;
+
+public class AtmUI {
+	public static void main(String[] args) {
+		IBank bank=new BankImpl();
+		System.out.println("Welcome to broke Bank for poor people like you...");
+		 boolean flag=true;
+		 Scanner sc=new Scanner(System.in);
+		 
+		 while(flag) {
+			 System.out.println("Enter 1 for deposit");
+			 System.out.println("========================");
+			 System.out.println("Enter 2 for withdrawal");
+			 System.out.println("========================");
+			 System.out.println("Enter 3 to exit");
+			 System.out.println("========================");
+			 System.out.print("Enter your choice: ");
+			 int choice=sc.nextInt();
+			 switch(choice) {
+			 case 1:bank.deposit();
+			 break;
+			 case 2:bank.withdraw();
+			 break;
+			 case 3:flag=false;
+			 break;
+			 default:System.out.println("Please enter a valid choice");
+			 }
+		 }
+		
+	}
+
+}

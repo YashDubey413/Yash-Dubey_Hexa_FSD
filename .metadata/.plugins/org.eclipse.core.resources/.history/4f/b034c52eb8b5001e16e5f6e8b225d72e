@@ -1,0 +1,21 @@
+package datetime;
+
+import java.time.LocalDate;
+
+public class DateTime {
+	public static void main(String[] args) {
+		
+		LocalDate date1=LocalDate.now();
+		
+		System.out.println(date1);
+		
+		LocalDate dob=LocalDate.of(2002, 4, 17);
+		System.out.println("DOb is: "+dob);
+		
+		String str="2001-12-18";
+		
+		LocalDate strdate=LocalDate.parse(str);
+		
+	}
+
+}

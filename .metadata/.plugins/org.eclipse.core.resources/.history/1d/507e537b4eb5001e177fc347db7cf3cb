@@ -1,0 +1,16 @@
+package patient;
+
+import java.util.HashSet;
+
+public class TestPAtient {
+	public static void main(String[] args) {
+		Patient p1=new Patient(101, "Yash","2002-17-04",'M',1234567890,new HashSet<Integer>());
+		System.out.println(p1);
+		
+		p1.insertPatientClaimId(111);
+		p1.insertPatientClaimId(112);
+		System.out.println(p1);
+		
+	}
+
+}

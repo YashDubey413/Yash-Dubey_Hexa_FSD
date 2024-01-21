@@ -1,0 +1,16 @@
+package collections;
+import java.util.ArrayList;
+import java.util.Collections;
+public class LinkedList {
+	public static void main(String[] args) {
+		ArrayList arr=new ArrayList();
+		arr.add(5);
+		arr.add(4);
+		arr.add(6);
+		arr.add("yah");
+		arr.add("aah");
+		Collections.sort(arr);
+		System.out.println(arr);
+	}
+
+}

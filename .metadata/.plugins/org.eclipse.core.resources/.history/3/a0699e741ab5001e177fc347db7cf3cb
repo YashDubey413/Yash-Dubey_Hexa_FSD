@@ -1,0 +1,13 @@
+package employee;
+
+public class TestPAtient {
+	public static void main(String[] args) {
+		Patient p1=new Patient(101, "Yash","2002-17-04",1234567890,null);
+		System.out.println(p1);
+		
+		Patient p2=new Patient(101, "Yash","2002-17-04",1234567890,null);
+		
+		p2.insertClaimId(111);
+	}
+
+}

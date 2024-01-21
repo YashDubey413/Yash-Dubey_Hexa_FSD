@@ -1,0 +1,29 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Crud {
+	public static void main(String[] args) {
+		
+		Connection conn=DBUtil.getDBConnection();
+		
+		String insert="insert into dept values(?,?,?)";
+		
+		try {
+			PreparedStatement prp=conn.prepareStatement(insert);
+			
+			prp.setInt(1,70);
+			
+		} 
+		
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

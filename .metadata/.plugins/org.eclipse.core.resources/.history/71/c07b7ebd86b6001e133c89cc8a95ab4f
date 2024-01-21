@@ -1,0 +1,22 @@
+package threads;
+
+public class Mythread extends Thread{
+	
+	public static void main(String[] args) {
+		
+		Mythread t1=new Mythread();
+		t1.setPriority(MAX_PRIORITY);
+		System.out.println(t1);
+		
+		Mythread t2=new Mythread();
+		t2.setPriority(NORM_PRIORITY);
+		System.out.println(t2);
+		
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+
+}
