@@ -1,0 +1,221 @@
+Day 5 Java-Java 8 features and jdbc
+
+
+Java 8 Feature
+=====================
+1. java.time package //DateTime API
+2. Functional interface
+3. static and default methods in interfaces
+4. Lambda expressions
+5. method/constructor references
+6. Optional return type
+7. Stream API
+
+
+
+Functional Interface
+=====================================
+An interface which will have only one abstract method is known as Functional Interface.
+Note: It can have static/default methods and variables also but only one abstract method
+
+
+Lamda Expression
+=============================
+It is implementation of functional interface
+It represents an instance of functional interface
+
+(parameters)->{implementation}
+
+Lambda expression will have return type as functional interface
+It can be implemented in any java class, we need not to have seperate implementation class.
+
+Note: Every Lamda Exp return type is functional interface
+
+
+Types Of Functional Interface and Implementations(Lambda Expressions)
+=========================================================================
+
+1.Consumer Functional Interface......................................
+
+Any method that consumes a parameter and does not return anything is consumer interface
+
+void abc(int a)
+Ex: setter method
+
+
+2. Supplier Functional Interface...................................
+
+Returns some type but does not take parameters
+Ex: int getId();
+
+
+3. Predicate Functional Interface..........................
+Return type boolean and should have parameter
+
+boolean method(parameter);
+
+Ex: boolean isValid(username);
+
+
+4. Function Functional Interface.........................
+
+Return type anything but boolean and having parameter
+Ex: int findLength(String name);
+
+
+Method References:
+======================================
+
+Ex: Consumer
+(String name)->
+{
+System.out.println(name); or System.out::println;
+}
+
+
+=============================
+In Java 8 we can write method with body in any interface or functional interface 
+
+the method should be static or default
+
+this default is different from access modifier it is a new keyword
+
+
+static methods can be called without creating interface objects
+
+default method can only be called using interface objects.
+
+
+
+=====================================================
+Optional Return Type
+
+If object is available it will return that else it can return else value mentioned in orelse which has to be of same type or it can be null
+
+
+Optional<Employee> getEmp(){
+
+	return emp.orElse(null);
+}
+
+
+=========================================================
+Stream API
+
+Enhances usability of java collection types making it easy to iterate and perform tasks against each element in the collection.
+
+supports sequential and parallel aggregate operations.
+
+It is not a datastructure
+does not support indexed access
+can be easily converted to arrays and lists 
+lazy loading
+
+
+Stream Operation Demo..............................................
+
+Two types--> Intermediate operation(in between and before terminal) and Terminal operations(no operation after this)
+
+List(strings) --->reading names(Intermediate operation) --->finding length name (Intermediate operation) ----> printing(Terminal operation)
+
+Operations that close a streams pipeline are called terminal operations.
+
+Intermediated operations are lazy and we can also have 0 intermediate operations............
+
+
+NOTE: One Stream can only be used once
+All methods in stream api take lambda expression as input
+ We have for each method for iterating in stream
+
+
+
+
+
+===============================================
+Eagerly loading and lazy loading
+
+class Address{
+String city
+}
+
+class Employee{
+int eid;
+String ename;
+
+}
+
+//Copy from github.....................
+
+==================================================================
+Stream methods in spring proj java 8 features string api package
+
+
+===================================================================
+JDBC
+
+JDBC is an API.
+
+Sunmicrosystem given JDBC API/Specification.
+
+java.sql.*;
+
+interfaces:
+Driver
+Connection
+Statement
+PreparedStatement
+ResultSet
+CallableStatement
+
+
+JDBC is used to connect with any SQL Database.
+
+IN jdbc we have 4 drivers
+Type 1,2,3,4 drivers
+
+Type 1,2,3 are outdated
+
+We are using type 4 driver
+
+Type 4 Driver/Thin Driver
+
+Steps:
+=======
+Download jar file
+
+Step1: Register Driver Class
+DriverManager.registerDriver(new Driver())
+or
+Class.forName("Driver")
+
+
+step2:
+	Get the DB Connection/Establish connection
+
+	Connection conn= DriverManager.getConnection(url,username,password);
+
+step3:
+	
+	Write SQL query and Create Any Statement
+		i.Statement(for queries or ddl)
+		ii.PreparedStatement for dynamic queries  or queries with input parameters
+
+step4: 
+	based on query invoke methods
+	i. int executeUpdate()//DML query
+	ii. ResultSet executeQuery()// for select queries
+
+step5: 
+	close the DB Connection.
+
+
+
+Class that have classes related to jdbc/hibernate are known as dao classes
+
+
+Factory class and factory method
+
+
+
+
+

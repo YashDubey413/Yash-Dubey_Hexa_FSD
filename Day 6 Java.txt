@@ -1,0 +1,111 @@
+Day 6 Java
+
+Multithreading page no.227 corejava pdf
+
+.....................................................................
+// Try this
+CallableStatement cstmt= con.prepareCall("{call mypro(?)}");  //call mypro();
+
+cstmt.setInt(1,101);
+
+cstmt.execute();
+.....................................................................
+
+Jvm creates a thread for executing main method
+
+Thread created by jvm is known as green thread or jvms thread
+
+Threads that are running in background are known as daemon threads
+
+After method is executed thread is killed immediately(Thread lifetime and method lifetime is same)
+
+Jvm cannot see inside method while memory allocation
+
+
+Local variables are also known as thread level variables as thread and local variable hace same lifetime
+
+Instance variables are also known as object level variables
+
+Static variables are also known as class level variables
+
+===========================================================================
+
+In java.lang package we have runnable interface
+
+
+interface Runnable{
+void run();
+}
+
+-----------------------------------------------------
+public class Thread implements Runnable{
+
+public Thread(){
+	//set priority of thread(Every thread can have priority between 1 to 10)
+	//set name, group name
+}
+
+void run(){
+empty method
+}
+
+start(){
+
+	//thread assign to thread scheduler
+	invoke run(); 
+
+}
+
+join(),yield(),sleep(),
+currentThread(),getter,setter
+
+}
+
+
+=================================
+printing thread will give three things
+
+[thread name,priority,group]
+[thread-0,5,main]
+
+
+==========================================
+
+synchronized keyword 
+(only one thread can access at a time)
+
+we can create methods synchronous and also create synchronous blocks and statements in it for blocks we have to pass this keyword
+
+used in multithreading project synchronize package
+
+===========================================
+Thread.sleep(1000)// pauses current thread for 1000 sec
+
+-----------------------------------------------
+yield()  method
+
+
+t1 and t2 have same priority but if there is t3 with same priority t1 will have to wait for t3 to finish
+t1.yield(); go to waiting state  [t1 is also known as helper thread]
+t2  will go ahead and execute
+
+Standing in a queue to take ticket suddently find handicap allow him to take ticket
+----------------------------------------
+
+join() method
+
+t1
+t2()  in t2 we will write t1.join() so after t1 t2 will occur
+t3()   t2.join()
+
+in wedding first fixing venue then printing card then distributing card
+
+
+
+
+
+
+
+
+
+
