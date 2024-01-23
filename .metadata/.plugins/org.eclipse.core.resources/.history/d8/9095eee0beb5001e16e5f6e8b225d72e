@@ -1,7 +1,0 @@
-package functional_interface;
-
-public class ImplJava8 {
-	
-	MyFuctionalInterface m1=(int a, int b)->{return a+b;};
-
-}
