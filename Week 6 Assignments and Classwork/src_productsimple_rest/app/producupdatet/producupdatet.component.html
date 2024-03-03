@@ -1,0 +1,12 @@
+<p>producupdatet works!</p>
+<h1>Update Form</h1>
+
+<form #formData="ngForm" (ngSubmit)="upadateProductById(formData.value)">
+
+    Enter ID : <input type="number" name="id"  ngModel  >  <br>
+    Enter NEW NAME : <input type="text" name="name" ngModel> <br>
+    Enter NEW PRICE : <input type="number" name="price" ngModel > <br>
+ 
+        <button type="submit">Update Product</button>
+
+</form>

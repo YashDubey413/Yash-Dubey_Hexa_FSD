@@ -1,0 +1,43 @@
+<p>claim-list works!</p>
+
+<h2>Claims List</h2>
+<div class="container col-md-4">
+<form  (submit)="addClaim()">
+
+<input type="text" placeholder="Add New Claim" class="form-control" name="newClaimAmount"  [(ngModel)]="newClaimAmount"> 
+<button type="submit" class="btn btn-success">Add</button>
+
+
+</form>
+
+
+<table class="table">
+    <tr>
+      <th>Id</th>
+      <th>Status</th>
+      <th>Amount</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let claim of claimsList">
+    <td>{{claim.claimid}}</td>
+    <td>{{claim.claimStatus}}</td>
+    <td>{{claim.claimAmount}}</td>
+    <td> <button type="button"  class="btn btn-danger">Remove</button></td>
+    </tr>
+
+
+</table>
+<ul>
+    <li *ngFor="let claim of claimsList">
+        <!-- <input type="checkbox"  [checked]="claim.claimStatus" (change)='toggleTodo(todo.id)'> -->
+
+        <span>{{claim.claimAmount}}</span>
+        <button type="button"  class="btn btn-danger">Remove</button>
+    
+    
+    </li>
+
+
+</ul>
+
+</div>

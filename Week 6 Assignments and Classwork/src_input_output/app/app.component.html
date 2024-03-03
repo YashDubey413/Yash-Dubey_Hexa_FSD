@@ -1,0 +1,8 @@
+<h1>Parent component</h1>
+
+
+<app-child [myInput]="parentMessage"  [myage]='age' (myEventEmitter)="getChildData($event)" (myEventEmitter1)="getChildName($event)"> </app-child>
+
+<h2>Child data in parent: {{childDataReceived}}</h2>
+
+<h2>Child name in parent: {{childNameReceived}}</h2>

@@ -1,0 +1,46 @@
+<p>product works!</p>
+
+<h1>Welcome to product component</h1>
+
+<div class='container col-md-4'>
+<button type="button" (click)="getAllProduct()">Dikha Products Jaldi</button>
+</div><br>
+<!-- <h1>{{productList | json}}</h1> -->
+
+<div class="container col-md-4">
+<table class="table table-dark">
+
+    
+    <tr><th>ID</th><th>NAME</th><th>PRICE</th></tr>
+
+    <tr *ngFor="let product of productList">
+        <td>{{product.id}}</td><td>{{product.name}}</td><td>{{product.price}}</td>
+        <td><button type="button" (click)="deleteById(product.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+
+
+</table>
+</div>
+
+
+
+Get Product By Name: <input type="text" #productName>
+<button type="button" (click)="getAllProductByName(productName.value)">Get Product By Name</button>
+
+<div class="container col-md-4">
+    <table class="table table-dark">
+    
+        
+        <tr><th>ID</th><th>NAME</th><th>PRICE</th></tr>
+    
+        <tr *ngFor="let product of productNameList">
+            <td>{{product.id}}</td><td>{{product.name}}</td><td>{{product.price}}</td>
+            <td><button type="button" (click)="deleteById(product.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    
+    
+    </table>
+    </div>
+
+
+

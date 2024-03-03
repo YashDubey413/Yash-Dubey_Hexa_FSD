@@ -1,0 +1,22 @@
+
+
+<h1>Routing Component</h1>
+
+<div class="alert alert-primary">
+<a routerLink="/home" >Home</a>
+<input type="text" [name]="user">
+</div>
+
+<div >
+<button type="submit" routerLink="/contactus/{{username}}" class="btn btn-success">Contact us</button>
+</div>
+<br>
+<div>
+    <ul>
+        <li class="alert alert-danger"><a routerLink="/aboutus" [queryParams]='addressJson'>About Us</a></li>
+    
+    </ul>
+
+</div>
+
+<router-outlet></router-outlet>
