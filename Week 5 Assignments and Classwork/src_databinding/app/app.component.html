@@ -1,0 +1,16 @@
+
+
+Welcome {{username}}
+
+<form style="background-color: red;">
+
+  One way data Binding: <input type="text" name="uname" [value]="username" ><br>
+
+  Two way data binding: <input type="text" name="uname" [(ngModel)]="username" ><br>
+
+<img [src]="imageURL" alt="Human Standing">
+
+
+<button type="button" (click)="getData()">Get  Data()</button>
+</form>
+

@@ -1,0 +1,52 @@
+
+<form   [formGroup]="registerForm" (ngSubmit)="onSubmit()"  class="container col-lg-4">
+    <div class="form-group">
+        <label>Employee First Name</label>
+        <input type="text" formControlName="empFirstName" class="form-control" [ngClass]="{'is-invalid':f['empFirstName'].errors,'is-valid': !f['empFirstName'].errors}">
+        <div *ngIf="f['empFirstName'].errors" class="invalid-feedback"></div>
+        <div *ngIf="!f['empFirstName'].errors" class="valid-feedback"></div>
+        <div *ngIf="f['empFirstName'].errors?.['required']" style="color: red;">Employee should have a first name</div>
+
+    </div>
+
+    <div class="form-group">
+        <label>Employee Last Name</label>
+        <input type="text" formControlName="empLastName" class="form-control" [ngClass]="{'is-invalid':f['empLastName'].errors,'is-valid': !f['empLastName'].errors}">
+        <div *ngIf="f['empLastName'].errors" class="invalid-feedback"></div>
+        <div *ngIf="!f['empLastName'].errors" class="valid-feedback"></div>
+        <div *ngIf="f['empLastName'].errors?.['required']" style="color: red;">Employee should have a last name</div>
+
+    </div>
+
+    <div class="form-group">
+        <label>Employee Email</label>
+        <input type="text" formControlName="empEmail" class="form-control" [ngClass]="{'is-invalid':f['empEmail'].errors,'is-valid': !f['empEmail'].errors}">
+        <div *ngIf=" f['empEmail'].errors" class="invalid-feedback"></div>
+        <div *ngIf="!f['empEmail'].errors" class="valid-feedback"></div>
+        <div *ngIf="f['empEmail'].errors?.['required']" style="color: red;">Employee should have an email</div>
+        <div *ngIf="f['empEmail'].errors?.['email']" style="color: red;">Email must valid</div>
+
+    </div>
+
+    <div class="form-group">
+        <label>Employee Salary</label>
+        <input type="text" formControlName="empSalary" class="form-control" [ngClass]="{'is-invalid':f['empSalary'].errors,'is-valid': !f['empSalary'].errors}">
+        <div *ngIf="f['empSalary'].errors" class="invalid-feedback"></div>
+        <div *ngIf="!f['empSalary'].errors" class="valid-feedback"></div>
+        <div *ngIf="f['empSalary'].errors?.['required']" style="color: red;">Salary is required field</div>
+        <div *ngIf="f['empSalary'].errors?.['min']" style="color: red;">Salary should be between 10k and 25k</div>
+        <div *ngIf="f['empSalary'].errors?.['max']" style="color: red;">Salary should be between 10k and 25k</div>
+
+    </div>
+
+        <label for=""></label>
+    <div>
+
+    </div>
+
+    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success">Register</button>
+
+    
+
+
+</form>

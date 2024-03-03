@@ -1,0 +1,50 @@
+
+
+<h1 *ngIf="true" >Hello Friends</h1>
+
+<h2 *ngIf="5>3"> IS 5 greater than 3</h2>
+
+Enter Choice: <input type="text" [(ngModel)]="num1">
+
+<div [ngSwitch]="num1"> 
+
+<div *ngSwitchCase="1">One is Selected</div>
+<div *ngSwitchCase="2">Two is Selected</div>
+<div *ngSwitchCase="3">Three is Selected</div>
+<div *ngSwitchDefault>Default is Selected</div>
+
+</div>
+
+Enter Tech: <input type="text" [(ngModel)]="tech">
+<div [ngSwitch]="tech"> 
+
+  <div *ngSwitchCase="'Java'"> <img src="../assets/java.png" alt="Java"> </div>
+  <div *ngSwitchCase="'.Net'"><img src="../assets/net.jpg" alt=".Net"> </div>
+  <div *ngSwitchCase="'Python'"><img src="../assets/python.jpg" alt="Pyhton"> </div>
+  <div *ngSwitchDefault>This technology is not supported</div>
+  
+  </div>
+
+<div *ngFor="let i of arr; let j=index"> Welcome {{i}} Index{{j}} </div>
+
+
+
+<h2 [ngStyle]="{'color':textColor,'background-color':bgColor}">This is CSS</h2>
+
+
+<div [ngClass]="isSpecial ? 'cls1':'cls2'">This div is special</div>
+
+<h1 ngNonBindable> Hello {{friends}}</h1>
+
+
+<div class="card card-block" appCardHover> App Card Hover</div>
+
+
+
+
+
+
+
+
+
+
