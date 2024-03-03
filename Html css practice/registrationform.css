@@ -1,0 +1,56 @@
+body{
+    background-image: linear-gradient(to bottom, rgb(53, 53, 247),rgb(152, 152, 253));
+}
+
+.container{
+    width: 40%;
+    margin: auto;
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+
+
+.form-group {
+   
+    width: 90%;
+    margin-left: 2%;  
+}
+
+.form-group input{
+    margin-bottom: 2%;
+}
+
+.form-group input[type="text"],input[type="email"]{
+    width:90%;
+    border-radius: 10px;
+    padding:2%;
+    border:solid gray 1px;
+}
+
+.form-group label{
+    display: block;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input{
+    border-radius: 10px;
+    border:solid gray 1px;
+    padding: 2%;
+}
+
+
+.input-container label {
+    display: block;
+
+}
+
