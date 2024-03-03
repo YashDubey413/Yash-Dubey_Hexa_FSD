@@ -1,0 +1,31 @@
+<h1 style="text-align: center; margin-bottom: 5%;">Welcome to Cricket Team Management System</h1>
+
+<div class="max-match">
+<button (click)="getPlayerByRoleMaxMatches()" >Get Players By Max Matches According to Role</button>
+
+<table style="padding:2%; margin:2%;">
+    <tr>
+        <th>playerId</th>
+        <th> playerName</th>  
+        <th> jerseyNumber</th>  
+        <th> role</th>  
+        <th> totalMatches</th>
+        <th> teamName</th>
+        <th>country</th>
+        <th>description</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let player of playersRoleMaxMatchesList">
+            <td>{{player.playerId}}</td>
+            <td>{{player.playerName}}</td>
+            <td>{{player.jerseyNumber}}</td>
+            <td>{{player.role}}</td>
+            <td>{{player.totalMatches}}</td>
+            <td>{{player.teamName}}</td>
+            <td>{{player.country}}</td>
+            <td>{{player.description}}</td>
+
+        </tr>
+    </tbody>
+</table>
+</div>
